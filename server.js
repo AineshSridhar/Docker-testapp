@@ -21,7 +21,7 @@ app.get('/getUsers', async(req, res) => {
     res.send(data)
 })
 
-app.post('addUsers', async(req, res) => {
+app.post('/addUsers', async(req, res) => {
     const userObj = req.body;
     console.log(req.body);
     await client.connect(URL);
@@ -37,4 +37,3 @@ app.post('addUsers', async(req, res) => {
 app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
 });
-
